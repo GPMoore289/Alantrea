@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="d20.webp">
+    <title>Alantrea</title>
+    <style>
+		main									{display: grid; grid-template-columns: auto auto;}
+		.image-container 						{display: inline-block; position: relative; }
+		.main-image								{display:block;}
+		.section1								{top:0px; left: 0px; width: 256px; height: 226px;}
+		.section2								{top:0px; left: 256px; width: 256px; height: 226px;}
+		.section3								{top:0px; left: 512px; width: 256px; height: 226px;}
+		.section4								{top:0px; left: 768px; width: 256px; height: 226px;}
+		.section5								{top:227px; left: 0px; width: 256px; height: 226px;}
+		.section6								{top:227px; left: 256px; width: 256px; height: 226px;}
+		.section7								{top:227px; left: 512px; width: 256px; height: 226px;}
+		.section8								{top:227px; left: 768px; width: 256px; height: 226px;}
+		.section9								{top:453px; left: 0px; width: 256px; height: 226px;}
+		.section10								{top:453px; left: 256px; width: 256px; height: 226px;}
+		.section11								{top:453px; left: 512px; width: 256px; height: 226px;}
+		.section12								{top:453px; left: 768px; width: 256px; height: 226px;}	
+		.section13								{top:679px; left: 0px; width: 256px; height: 226px;}
+		.section14								{top:679px; left: 256px; width: 256px; height: 226px;}
+		.section15								{top:679px; left: 512px; width: 256px; height: 226px;}			
+		.section16								{top:679px; left: 768px; width: 256px; height: 226px;}	
+		.hover-area 							{position: absolute; cursor: pointer; transition: background-color 0.3s ease;}
+		.border1								{border-right: dashed 2px black; border-bottom: dashed 2px black;}
+		.border2								{border-bottom: dashed 2px black;}
+		.border3								{border-right: dashed 2px black;}
+		.hover-area:hover 						{background-color: rgba(0, 255, 0, 0.4); }
+		.displaycontainer						{display: flex; justify-content: center; align-items: center; }
+		.displaycontainer img					{width: 100%;}		
+		
+    </style>
+</head>
+<body>
+	<main>
+		<div class="image-container">
+			<img src="alantreabrowser.png" alt="Main Image" class="main-image">
+			<div class="hover-area border1 section1" onclick="showImage('section1.png')"></div>
+			<div class="hover-area border1 section2" onclick="showImage('section2.png')"></div>
+			<div class="hover-area border1 section3" onclick="showImage('section3.png')"></div>
+			<div class="hover-area border2 section4" onclick="showImage('section4.png')"></div>
+			<div class="hover-area border1 section5" onclick="showImage('section5.png')"></div>			
+			<div class="hover-area border1 section6" onclick="showImage('section6.png')"></div>			
+			<div class="hover-area border1 section7" onclick="showImage('section7.png')"></div>			
+			<div class="hover-area border2 section8" onclick="showImage('section8.png')"></div>
+			<div class="hover-area border1 section9" onclick="showImage('section9.png')"></div>			
+			<div class="hover-area border1 section10" onclick="showImage('section10.png')"></div>			
+			<div class="hover-area border1 section11" onclick="showImage('section11.png')"></div>			
+			<div class="hover-area border2 section12" onclick="showImage('section12.png')"></div>				
+			<div class="hover-area border3 section13" onclick="showImage('section13.png')"></div>			
+			<div class="hover-area border3 section14" onclick="showImage('section14.png')"></div>			
+			<div class="hover-area border3 section15" onclick="showImage('section15.png')"></div>			
+			<div class="hover-area section16" onclick="showImage('section16.png')"></div>			
+		</div>	
+		<div class="displaycontainer">
+			<img id="displayedImage" src="" alt="Click on a section of the map">
+		</div>
+	</main>
+  <script>
+    function showImage(imageSrc) {
+      const displayedImage = document.getElementById('displayedImage');
+      displayedImage.src = imageSrc;
+    }
+  </script>
+</body>
+</html>
