@@ -6,7 +6,7 @@
 	<link rel="icon" type="image/x-icon" href="d20.webp">
     <title>Alantrea</title>
     <style>
-		main									{display: grid; grid-template-columns: auto auto;}
+		main									{display: grid; grid-template-columns: 1fr 1fr;}
 		.image-container 						{display: inline-block; position: relative; }
 		.main-image								{display:block;}
 		.section1								{top:0px; left: 0px; width: 256px; height: 226px;}
@@ -29,9 +29,7 @@
 		.border1								{border-right: dashed 2px black; border-bottom: dashed 2px black;}
 		.border2								{border-bottom: dashed 2px black;}
 		.border3								{border-right: dashed 2px black;}
-		.hover-area:hover 						{background-color: rgba(0, 255, 0, 0.4); }
-		.displaycontainer						{display: flex; justify-content: center; align-items: center; }
-		.displaycontainer img					{width: 100%;}		
+		.hover-area:hover 						{background-color: rgba(0, 255, 0, 0.4); }	
 		
     </style>
 </head>
@@ -56,14 +54,19 @@
 			<div class="hover-area border3 section15" onclick="showImage('section15.png')"></div>			
 			<div class="hover-area section16" onclick="showImage('section16.png')"></div>			
 		</div>	
-		<div class="displaycontainer">
-			<img id="displayedImage" src="" alt="Click on a section of the map">
+		<div class="displaycontainerv">
+			<div class="displaycontainerh">
+				<img src="scalev.png" alt="vertical scale" style="height:618px">
+				<img id="displayedImage" src="default.png" alt="Click on a section of the map">
+			</div>
+			<img src="scaleh.png" alt="horizontal scale" style="width:815px">
 		</div>
 	</main>
   <script>
     function showImage(imageSrc) {
       const displayedImage = document.getElementById('displayedImage');
       displayedImage.src = imageSrc;
+	  displayedImage.style.width = "700px";
     }
   </script>
 </body>
